@@ -121,6 +121,28 @@
   .lang span { font-family: "Space Grotesk", sans-serif; font-size: 18px; font-weight: 500; }
   .lang small { color: var(--accent); font-size: 13px; }
 
+  /* About */
+  .about { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: start; }
+  .about-text p { color: var(--muted); font-size: 17px; margin-bottom: 18px; }
+  .about-text p:first-child { color: var(--text); }
+  .about-side { display: flex; flex-direction: column; gap: 16px; }
+  .side-box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+  .side-title { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 17px; margin-bottom: 8px; }
+  .side-box p { color: var(--muted); font-size: 15px; }
+  .side-box .side-meta { color: var(--accent); font-size: 13px; margin-top: 10px; font-weight: 500; }
+  .side-box .chips { margin-top: 4px; }
+  .sublabel { font-family: "Space Grotesk", sans-serif; font-size: 18px; font-weight: 700; margin: 56px 0 24px; }
+  .sublabel.first { margin-top: 0; }
+  .facts .sublabel { margin-top: 40px; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; margin-top: 16px; }
+  .facts .langs { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .facts .lang { padding: 14px 16px; }
+  .facts .lang span { font-size: 16px; }
+  .skills { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .skills li { padding-left: 18px; position: relative; }
+  .skills li::before { content: ""; position: absolute; left: 0; top: 10px; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+  .skills small { display: block; color: var(--muted); font-size: 13px; }
+
   /* Projects */
   .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 18px; }
   .card {
@@ -153,10 +175,14 @@
   @media (max-width: 860px) and (min-width: 641px) {
     .photo { width: 220px; height: 220px; }
   }
+  @media (max-width: 760px) {
+    .about { grid-template-columns: 1fr; }
+  }
   @media (max-width: 640px) {
     .wrap { padding: 0 16px; }
-    nav ul { gap: 16px; }
-    nav ul a { font-size: 13px; }
+    nav ul { gap: 12px; }
+    nav ul a { font-size: 12.5px; }
+    .logo { font-size: 16px; }
     .hero { padding: 64px 0 70px; }
     .hero-grid { grid-template-columns: 1fr; gap: 32px; }
     .photo { width: 180px; height: 180px; order: -1; }
@@ -175,6 +201,7 @@
   <div class="wrap">
     <a href="#" class="logo">EB<span>.</span></a>
     <ul>
+      <li><a href="#ueber-mich">Über mich</a></li>
       <li><a href="#lebenslauf">Lebenslauf</a></li>
       <li><a href="#projekte">Projekte</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
@@ -185,10 +212,10 @@
 <header class="hero">
   <div class="wrap hero-grid">
     <div class="hero-text">
-    <div class="tag"><span class="dot"></span>Offen für neue Möglichkeiten</div>
+    <div class="tag"><span class="dot"></span>Offen für Werkstudentenstellen · ab sofort</div>
     <h1>Emanuel<br><span class="hl">Borovik</span></h1>
     <p class="lead">
-      BWL-Student an der THWS mit Praxiserfahrung bei der Fraport AG.
+      BWL-Student an der THWS mit Praxiserfahrung im Marketing der Fraport AG.
       Mich interessiert, wie Unternehmen Kunden binden und Veränderung erfolgreich gestalten –
       von Loyalitätsprogrammen bis Change Management.
     </p>
@@ -201,38 +228,94 @@
   </div>
 </header>
 
+<section id="ueber-mich">
+  <div class="wrap reveal">
+    <div class="label">Über mich</div>
+    <h2>Zwischen Strategie und Umsetzung</h2>
+    <div class="about">
+      <div class="about-text">
+        <p>Ich studiere Betriebswirtschaft an der THWS mit den Schwerpunkten Change Management sowie Marketing mit Fokus auf KI und Digitalisierung. Bei der Fraport AG habe ich im Marketing gearbeitet und meine Bachelorarbeit zur Optimierung des Miles &amp; More Loyalitätsprogramms am Frankfurter Flughafen geschrieben.</p>
+        <p>Mich reizen Aufgaben, bei denen Analyse und Menschen zusammenkommen: Daten auswerten, daraus konkrete Empfehlungen ableiten und Veränderungen so gestalten, dass sie im Alltag auch ankommen. Am liebsten in Digitalisierungs- und Change-Projekten.</p>
+        <p>Neben dem Studium arbeite ich seit Jahren praktisch mit, in der Logistik, in der Produktion und seit über zehn Jahren ehrenamtlich in der Kinderbetreuung. Das hat mir gezeigt, wie Arbeit an der Basis funktioniert.</p>
+      </div>
+      <div class="about-side">
+        <div class="side-box">
+          <div class="side-title">Was ich suche</div>
+          <p>Werkstudentenstelle oder studentische Aushilfe in Marketing, Change oder Digitalisierung.</p>
+          <p class="side-meta">Verfügbar ab sofort · eingeschrieben bis 03/2027</p>
+        </div>
+        <div class="side-box">
+          <div class="side-title">Interessen</div>
+          <div class="chips"><span class="chip">Schach</span><span class="chip">Fußball</span><span class="chip">Radfahren</span><span class="chip">Innovation &amp; Technologie</span><span class="chip">Luftfahrt</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="lebenslauf">
   <div class="wrap reveal">
     <div class="label">Lebenslauf</div>
     <h2>Mein Weg bisher</h2>
+
+    <div class="sublabel first">Berufserfahrung</div>
     <div class="timeline">
       <div class="item">
-        <div class="when">Jan. 2026 – Juni 2026</div>
+        <div class="when">12/2025 – 06/2026</div>
         <h3>Bachelorarbeit <span style="color:var(--muted);font-weight:500;font-size:15px">· Note 1,3</span></h3>
         <div class="where">Fraport AG · Frankfurt am Main</div>
-        <p>Optimierung des Loyalitätsprogramms im Retailbereich am Frankfurter Flughafen.</p>
+        <p>„Optimierung des Miles &amp; More Loyalitätsprogramms im Retail-Bereich des Flughafen Frankfurt“. Analyse und Ableitung von Optimierungs- und Handlungsempfehlungen.</p>
       </div>
       <div class="item">
-        <div class="when">Juli 2025 – Dez. 2025</div>
-        <h3>Praktikant</h3>
+        <div class="when">07/2025 – 12/2025</div>
+        <h3>Praktikum im Marketing</h3>
         <div class="where">Fraport AG · Frankfurt am Main</div>
-        <p>Sechs Monate im Retail Marketing mit Fokus auf das Miles &amp; More Loyaltyprogramm.</p>
+        <p>Schwerpunkt Miles &amp; More. Mitarbeit an Marketing- und Optimierungsprojekten.</p>
       </div>
       <div class="item">
-        <div class="when">Studium</div>
-        <h3>Bachelor Betriebswirtschaftslehre</h3>
-        <div class="where">Technische Hochschule Würzburg-Schweinfurt</div>
-        <p>Studienschwerpunkt Business Transformation &amp; Change Management an der THWS Business School.</p>
+        <div class="when">08/2024 – heute</div>
+        <h3>Aushilfe in der Logistik</h3>
+        <div class="where">Reinfurt Holzernte und Logistik GmbH &amp; Co. KG · Marktheidenfeld</div>
       </div>
       <div class="item">
-        <div class="when">Feb. 2019 – Juli 2019</div>
-        <h3>Praktikant im Einkauf</h3>
+        <div class="when">2020 – 2023</div>
+        <h3>Ferienaushilfe als Maschinenbediener</h3>
+        <div class="where">Procter &amp; Gamble · Marktheidenfeld</div>
+        <p>Tätigkeit in den Semesterferien.</p>
+      </div>
+      <div class="item">
+        <div class="when">02/2019 – 07/2019</div>
+        <h3>Praktikum im Einkauf</h3>
         <div class="where">WAREMA Renkhoff SE · Marktheidenfeld</div>
-        <p>Sechs Monate im Einkauf eines der führenden Hersteller für Sonnenschutztechnik.</p>
+      </div>
+      <div class="item">
+        <div class="when">09/2018 – 12/2019</div>
+        <h3>Assistent des Ausbilders <span style="color:var(--muted);font-weight:500;font-size:15px">· Nebenjob</span></h3>
+        <div class="where">PRIMEROS Qualifikation GmbH · Karlstadt am Main</div>
+      </div>
+      <div class="item">
+        <div class="when">09/2018 – 01/2019</div>
+        <h3>Praktikum in der Verwaltung</h3>
+        <div class="where">Martinsbräu · Marktheidenfeld</div>
       </div>
     </div>
 
-    <div class="label" style="margin-top:72px">Ehrenamt</div>
+    <div class="sublabel">Bildungsweg</div>
+    <div class="timeline">
+      <div class="item">
+        <div class="when">10/2020 – 03/2027</div>
+        <h3>Betriebswirtschaft (Bachelor of Arts)</h3>
+        <div class="where">Technische Hochschule Würzburg-Schweinfurt</div>
+        <p>Schwerpunkte: Change Management sowie Marketing mit Fokus auf KI &amp; Digitalisierung.</p>
+      </div>
+      <div class="item">
+        <div class="when">09/2018 – 07/2020</div>
+        <h3>Fachhochschulreife</h3>
+        <div class="where">Fachoberschule Marktheidenfeld</div>
+      </div>
+    </div>
+
+    <div class="sublabel">Ehrenamt</div>
     <div class="timeline">
       <div class="item">
         <div class="when">2015 – heute</div>
@@ -242,12 +325,34 @@
       </div>
     </div>
 
-    <div class="label" style="margin-top:72px">Sprachen</div>
-    <div class="langs">
-      <div class="lang"><span>Deutsch</span><small>Muttersprache</small></div>
-      <div class="lang"><span>Russisch</span><small>Fließend</small></div>
-      <div class="lang"><span>Englisch</span><small>Verhandlungssicher</small></div>
-      <div class="lang"><span>Französisch</span><small>Gute Kenntnisse</small></div>
+    <div class="facts">
+      <div>
+        <div class="sublabel">Kenntnisse</div>
+        <ul class="skills">
+          <li>MS Office – sehr gut <small>PowerPoint, Word, Excel, Outlook</small></li>
+          <li>MS Teams</li>
+          <li>Präsentationen &amp; Auswertungen</li>
+          <li>Analytisches, lösungsorientiertes Arbeiten</li>
+          <li>KI-Tools &amp; GitHub</li>
+        </ul>
+      </div>
+      <div>
+        <div class="sublabel">Sprachen</div>
+        <div class="langs">
+          <div class="lang"><span>Deutsch</span><small>Muttersprache</small></div>
+          <div class="lang"><span>Russisch</span><small>Fließend</small></div>
+          <div class="lang"><span>Englisch</span><small>C1</small></div>
+          <div class="lang"><span>Französisch</span><small>B1 · DELF-Diplom</small></div>
+        </div>
+      </div>
+      <div>
+        <div class="sublabel">Weiterbildungen</div>
+        <ul class="skills">
+          <li>Beschleunigte Grundqualifikation (IHK) <small>2023</small></li>
+          <li>DELF-Diplom Französisch, Stufe B1+ <small>2015</small></li>
+          <li>Führerschein Klasse B und CE</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
