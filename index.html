@@ -178,6 +178,14 @@
   .item.has-badge .item-body p { max-width: none; }
   .item.has-badge { padding-bottom: 18px; }
 
+  .grade {
+    display: inline-flex; align-items: center; gap: 4px; vertical-align: 3px;
+    margin-left: 8px; padding: 3px 11px; border-radius: 99px;
+    background: var(--accent); color: var(--on-accent);
+    font-family: "Inter", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .01em;
+    box-shadow: 0 0 0 4px var(--accent-dim), 0 6px 18px rgba(37, 99, 235, .35);
+  }
+
   /* Languages */
   .langs { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
   .lang {
@@ -265,6 +273,7 @@
     .stats { margin-top: 44px; gap: 10px; }
     .stat { padding: 16px; }
     .stat .num-big { font-size: 28px; }
+    .grade { margin: 6px 0 2px; }
     .item.has-badge { grid-template-columns: 60px 1fr; gap: 10px; }
     .badge { width: 60px; height: 44px; border-radius: 10px; font-size: 11px; }
     .badge.logo { width: 60px; padding: 6px 7px; }
@@ -368,7 +377,7 @@
         <div class="badge logo"><img src="logos/fraport.png" alt="Logo Fraport"></div>
         <div class="item-body">
           <div class="when">12/2025 – 06/2026</div>
-          <h3>Bachelorarbeit <span style="color:var(--muted);font-weight:500;font-size:15px">· Note 1,3</span></h3>
+          <h3>Bachelorarbeit <span class="grade">★ Note 1,3</span></h3>
           <div class="where">Fraport AG · Frankfurt am Main</div>
           <p>„Optimierung des Miles &amp; More Loyalitätsprogramms im Retail-Bereich des Flughafen Frankfurt“. Analyse und Ableitung von Optimierungs- und Handlungsempfehlungen.</p>
   </div>
