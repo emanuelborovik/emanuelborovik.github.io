@@ -274,6 +274,12 @@
     background: var(--accent-dim); color: var(--accent);
   }
   .icon svg { width: 22px; height: 22px; }
+  .card.featured { grid-column: 1 / -1; background: linear-gradient(135deg, var(--surface-2), var(--surface) 60%); border-color: color-mix(in srgb, var(--accent) 35%, var(--border)); }
+  .card.featured h3 { font-size: 24px; }
+  .card.featured p { max-width: 760px; }
+  .live { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--accent); padding: 5px 12px; border-radius: 99px; background: var(--accent-dim); }
+  .live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); animation: pulse 1.8s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 60%, transparent); } 50% { box-shadow: 0 0 0 6px transparent; } }
   .card .num { font-family: "Space Grotesk", sans-serif; color: var(--muted); font-size: 14px; opacity: .7; }
   .card h3 { font-family: "Space Grotesk", sans-serif; font-size: 20px; margin-bottom: 10px; }
   .card p { color: var(--muted); font-size: 15px; flex: 1; }
@@ -534,6 +540,12 @@
     <div class="label">Projekte</div>
     <h2>Woran ich gearbeitet habe</h2>
     <div class="grid">
+      <div class="card featured">
+        <div class="card-top"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></div><div class="live"><span class="live-dot"></span>Laufend</div></div>
+        <h3>Key Visual &amp; Kampagnen für die WVV</h3>
+        <p>Praxisprojekt im Marketing-Schwerpunkt der THWS im Wintersemester 2026/27 mit der WVV. Ziel: mehr Spenderinnen, Spender und Vereine für die regionale Spendenplattform „Zusammen für Mainfranken“. Unser Team entwickelt ein neues Key Visual und Kampagnen über App-Push, Plakat, Radio und Social Media, die zum Jahresvoting im Dezember live gehen. Grundlage sind eine Benchmark-Analyse vergleichbarer Plattformen und messbare Ziele, etwa 30&nbsp;% mehr Besuche auf der Plattform.</p>
+        <div class="chips"><span class="chip">Kampagnenplanung</span><span class="chip">Key Visual</span><span class="chip">Benchmark-Analyse</span><span class="chip">SMART-Ziele</span></div>
+      </div>
       <div class="card">
         <div class="card-top"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/><path d="M15 8h5v5"/></svg></div><div class="num">01</div></div>
         <h3>Loyalitätsprogramm Fraport</h3>
@@ -678,13 +690,19 @@
     "Praxisprojekt an der THWS im Sommersemester 2026 mit der Unternehmensberatung CONLAB: ein Funnel, der aus kalten Kontakten planbar Erstgespräche macht. Über LinkedIn-Outreach und LinkedIn Ads, einen ROI-Kalkulator als Lead-Magnet, automatisierte E-Mail-Strecken und eine Landingpage zur Terminbuchung. Als stellvertretender Projektleiter habe ich LinkedIn Ads und die Abstimmung mit dem Auftraggeber verantwortet.":
       "Applied project at THWS in summer 2026 with the consultancy CONLAB: a funnel that reliably turns cold contacts into first meetings – via LinkedIn outreach and LinkedIn Ads, an ROI calculator as a lead magnet, automated email sequences and a booking landing page. As deputy project lead I was responsible for LinkedIn Ads and coordination with the client.",
     "Lead-Generierung": "Lead generation", "KI-Skills": "AI skills",
+    "Key Visual &amp; Kampagnen für die WVV": "Key visual &amp; campaigns for WVV",
+    "Laufend": "Ongoing",
+    '<span class="live-dot"></span>Laufend': '<span class="live-dot"></span>Ongoing',
+    "Praxisprojekt im Marketing-Schwerpunkt der THWS im Wintersemester 2026/27 mit der WVV. Ziel: mehr Spenderinnen, Spender und Vereine für die regionale Spendenplattform „Zusammen für Mainfranken“. Unser Team entwickelt ein neues Key Visual und Kampagnen über App-Push, Plakat, Radio und Social Media, die zum Jahresvoting im Dezember live gehen. Grundlage sind eine Benchmark-Analyse vergleichbarer Plattformen und messbare Ziele, etwa 30&nbsp;% mehr Besuche auf der Plattform.":
+      "Applied project in the THWS marketing specialization (winter 2026/27) with WVV, the Würzburg utility. Goal: more donors and clubs for the regional donation platform “Zusammen für Mainfranken”. Our team is developing a new key visual and campaigns across app push notifications, posters, radio and social media that go live for the annual vote in December – based on a benchmark analysis of comparable platforms and measurable goals such as 30&nbsp;% more platform visits.",
+    "Kampagnenplanung": "Campaign planning", "Benchmark-Analyse": "Benchmark analysis", "SMART-Ziele": "SMART goals",
     "Wissensmanagement": "Knowledge management", "Workshop-Design": "Workshop design",
     "Lass uns sprechen": "Let’s talk",
     "Ob Praktikum, Projekt oder einfach Austausch – ich freue mich über deine Nachricht.": "Whether it’s a role, a project or just an exchange of ideas – I’d be happy to hear from you.",
     "E-Mail schreiben": "Send an email",
     "E-Mail": "Email"
   };
-  const I18N_SEL = 'nav ul a, .tag, .lead, .btn, .num-big, .stat-label, .label, h2, h3, .about-text p, .side-title, .side-box p, .chip, .sublabel, .when, .item-body p, .where, .minor-title, .m-when, .m-what, .skills li, .lang span, .lang small, .card p, .contact-box p, .foot-links a';
+  const I18N_SEL = '.live, nav ul a, .tag, .lead, .btn, .num-big, .stat-label, .label, h2, h3, .about-text p, .side-title, .side-box p, .chip, .sublabel, .when, .item-body p, .where, .minor-title, .m-when, .m-what, .skills li, .lang span, .lang small, .card p, .contact-box p, .foot-links a';
   const norm = h => h.replace(/\s+/g, " ").trim();
   const i18nEls = [...document.querySelectorAll(I18N_SEL)].map(el => ({ el, de: el.innerHTML, key: norm(el.innerHTML) }));
   const langBtn = document.getElementById("langToggle");
