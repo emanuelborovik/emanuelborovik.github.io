@@ -105,6 +105,15 @@
   .item .where { color: var(--accent); font-size: 15px; font-weight: 500; }
   .item p { color: var(--muted); margin-top: 8px; max-width: 620px; }
 
+  /* Languages */
+  .langs { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
+  .lang {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 18px 20px; display: flex; flex-direction: column; gap: 2px;
+  }
+  .lang span { font-family: "Space Grotesk", sans-serif; font-size: 18px; font-weight: 500; }
+  .lang small { color: var(--accent); font-size: 13px; }
+
   /* Projects */
   .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 18px; }
   .card {
@@ -206,6 +215,24 @@
         <div class="where">WAREMA Renkhoff SE · Marktheidenfeld</div>
         <p>Sechs Monate im Einkauf eines der führenden Hersteller für Sonnenschutztechnik.</p>
       </div>
+    </div>
+
+    <div class="label" style="margin-top:72px">Ehrenamt</div>
+    <div class="timeline">
+      <div class="item">
+        <div class="when">2015 – heute</div>
+        <h3>Assistent in der Kinderbetreuung</h3>
+        <div class="where">Zentralwohlfahrtsstelle der Juden in Deutschland (ZWST)</div>
+        <p>Seit über zehn Jahren ehrenamtlich als Betreuer bei Kinderfreizeiten: Gruppen leiten, Programme gestalten und Verantwortung für Kinder übernehmen.</p>
+      </div>
+    </div>
+
+    <div class="label" style="margin-top:72px">Sprachen</div>
+    <div class="langs">
+      <div class="lang"><span>Deutsch</span><small>Muttersprache</small></div>
+      <div class="lang"><span>Russisch</span><small>Fließend</small></div>
+      <div class="lang"><span>Englisch</span><small>Verhandlungssicher</small></div>
+      <div class="lang"><span>Französisch</span><small>Gute Kenntnisse</small></div>
     </div>
   </div>
 </section>
