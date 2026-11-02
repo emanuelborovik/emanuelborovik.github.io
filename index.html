@@ -254,7 +254,11 @@
   .m-where { color: var(--accent); font-size: 14px; text-align: right; }
 
   /* Projects */
-  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .grid { display: grid; gap: 18px; }
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .proj-group { font-family: "Space Grotesk", sans-serif; font-size: 18px; font-weight: 700; margin: 0 0 20px; }
+  .grid + .proj-group { margin-top: 56px; }
   .card {
     background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
     padding: 28px; display: flex; flex-direction: column;
@@ -313,7 +317,7 @@
   }
   @media (max-width: 860px) {
     .stats { grid-template-columns: repeat(2, 1fr); }
-    .grid { grid-template-columns: 1fr; }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
   }
   @media (max-width: 640px) {
     .wrap { padding: 0 16px; }
@@ -539,13 +543,24 @@
   <div class="wrap reveal">
     <div class="label">Projekte</div>
     <h2>Woran ich gearbeitet habe</h2>
-    <div class="grid">
-      <div class="card featured">
+    <div class="proj-group">Aktuelle Projekte</div>
+    <div class="grid grid-2">
+      <div class="card">
         <div class="card-top"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></div><div class="live"><span class="live-dot"></span>Laufend</div></div>
         <h3>Key Visual &amp; Kampagnen für die WVV</h3>
         <p>Praxisprojekt im Marketing-Schwerpunkt der THWS im Wintersemester 2026/27 mit der WVV. Ziel: mehr Spenderinnen, Spender und Vereine für die regionale Spendenplattform „Zusammen für Mainfranken“. Unser Team entwickelt ein neues Key Visual und Kampagnen über App-Push, Plakat, Radio und Social Media, die zum Jahresvoting im Dezember live gehen. Grundlage sind eine Benchmark-Analyse vergleichbarer Plattformen und messbare Ziele, etwa 30&nbsp;% mehr Besuche auf der Plattform.</p>
         <div class="chips"><span class="chip">Kampagnenplanung</span><span class="chip">Key Visual</span><span class="chip">Benchmark-Analyse</span><span class="chip">SMART-Ziele</span></div>
       </div>
+      <div class="card">
+        <div class="card-top"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2V17h6v-.3c0-.8.4-1.5 1-2A7 7 0 0 0 12 2z"/></svg></div><div class="live"><span class="live-dot"></span>Laufend</div></div>
+        <h3>Wissenssicherung bei RAUSCH Technology</h3>
+        <p>Praxisprojekt im Team zu der Frage, wie Wissen im Unternehmen geteilt und gesichert werden kann. Ich verantworte die Teilgruppe Workshop: Motive und Hürden beim Wissensteilen, Methoden zur Wissenssicherung und das Testen eines digitalen Tools.</p>
+        <div class="chips"><span class="chip">Wissensmanagement</span><span class="chip">Interviews</span><span class="chip">Workshop-Design</span></div>
+      </div>
+    </div>
+
+    <div class="proj-group">Abgeschlossene Projekte</div>
+    <div class="grid grid-3">
       <div class="card">
         <div class="card-top"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/><path d="M15 8h5v5"/></svg></div><div class="num">01</div></div>
         <h3>Loyalitätsprogramm Fraport</h3>
@@ -563,12 +578,6 @@
         <h3>Change-Evaluation für Bosch Rexroth</h3>
         <p>Praxisprojekt im Schwerpunkt Business Transformation &amp; Change Management: ein Konzept, das die Wirksamkeit von Change Management über Qualitätskriterien und KPIs messbar macht. Präsentiert beim Forum Change Connect.</p>
         <div class="chips"><span class="chip">Change Management</span><span class="chip">KPIs</span><span class="chip">Praxisprojekt</span></div>
-      </div>
-      <div class="card">
-        <div class="card-top"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2V17h6v-.3c0-.8.4-1.5 1-2A7 7 0 0 0 12 2z"/></svg></div><div class="num">04</div></div>
-        <h3>Wissenssicherung bei RAUSCH Technology</h3>
-        <p>Laufendes Praxisprojekt im Team zu der Frage, wie Wissen im Unternehmen geteilt und gesichert werden kann. Ich verantworte die Teilgruppe Workshop: Motive und Hürden beim Wissensteilen, Methoden zur Wissenssicherung und das Testen eines digitalen Tools.</p>
-        <div class="chips"><span class="chip">Wissensmanagement</span><span class="chip">Interviews</span><span class="chip">Workshop-Design</span></div>
       </div>
     </div>
   </div>
@@ -684,14 +693,14 @@
       "Applied project in the Business Transformation &amp; Change Management specialization: a concept that makes the effectiveness of change management measurable through quality criteria and KPIs. Presented at Forum Change Connect.",
     "Praxisprojekt": "Applied project",
     "Wissenssicherung bei RAUSCH Technology": "Knowledge retention at RAUSCH Technology",
-    "Laufendes Praxisprojekt im Team zu der Frage, wie Wissen im Unternehmen geteilt und gesichert werden kann. Ich verantworte die Teilgruppe Workshop: Motive und Hürden beim Wissensteilen, Methoden zur Wissenssicherung und das Testen eines digitalen Tools.":
-      "Ongoing team project on how knowledge can be shared and retained within a company. I lead the workshop sub-team: motives and barriers to knowledge sharing, methods for knowledge retention and testing a digital tool.",
+    "Praxisprojekt im Team zu der Frage, wie Wissen im Unternehmen geteilt und gesichert werden kann. Ich verantworte die Teilgruppe Workshop: Motive und Hürden beim Wissensteilen, Methoden zur Wissenssicherung und das Testen eines digitalen Tools.":
+      "Team project on how knowledge can be shared and retained within a company. I lead the workshop sub-team: motives and barriers to knowledge sharing, methods for knowledge retention and testing a digital tool.",
     "Marketing &amp; Sales Machine für CONLAB": "Marketing &amp; sales machine for CONLAB",
     "Praxisprojekt an der THWS im Sommersemester 2026 mit der Unternehmensberatung CONLAB: ein Funnel, der aus kalten Kontakten planbar Erstgespräche macht. Über LinkedIn-Outreach und LinkedIn Ads, einen ROI-Kalkulator als Lead-Magnet, automatisierte E-Mail-Strecken und eine Landingpage zur Terminbuchung. Als stellvertretender Projektleiter habe ich LinkedIn Ads und die Abstimmung mit dem Auftraggeber verantwortet.":
       "Applied project at THWS in summer 2026 with the consultancy CONLAB: a funnel that reliably turns cold contacts into first meetings – via LinkedIn outreach and LinkedIn Ads, an ROI calculator as a lead magnet, automated email sequences and a booking landing page. As deputy project lead I was responsible for LinkedIn Ads and coordination with the client.",
     "Lead-Generierung": "Lead generation", "KI-Skills": "AI skills",
     "Key Visual &amp; Kampagnen für die WVV": "Key visual &amp; campaigns for WVV",
-    "Laufend": "Ongoing",
+    "Laufend": "Ongoing", "Aktuelle Projekte": "Current projects", "Abgeschlossene Projekte": "Completed projects",
     '<span class="live-dot"></span>Laufend': '<span class="live-dot"></span>Ongoing',
     "Praxisprojekt im Marketing-Schwerpunkt der THWS im Wintersemester 2026/27 mit der WVV. Ziel: mehr Spenderinnen, Spender und Vereine für die regionale Spendenplattform „Zusammen für Mainfranken“. Unser Team entwickelt ein neues Key Visual und Kampagnen über App-Push, Plakat, Radio und Social Media, die zum Jahresvoting im Dezember live gehen. Grundlage sind eine Benchmark-Analyse vergleichbarer Plattformen und messbare Ziele, etwa 30&nbsp;% mehr Besuche auf der Plattform.":
       "Applied project in the THWS marketing specialization (winter 2026/27) with WVV, the Würzburg utility. Goal: more donors and clubs for the regional donation platform “Zusammen für Mainfranken”. Our team is developing a new key visual and campaigns across app push notifications, posters, radio and social media that go live for the annual vote in December – based on a benchmark analysis of comparable platforms and measurable goals such as 30&nbsp;% more platform visits.",
@@ -702,7 +711,7 @@
     "E-Mail schreiben": "Send an email",
     "E-Mail": "Email"
   };
-  const I18N_SEL = '.live, nav ul a, .tag, .lead, .btn, .num-big, .stat-label, .label, h2, h3, .about-text p, .side-title, .side-box p, .chip, .sublabel, .when, .item-body p, .where, .minor-title, .m-when, .m-what, .skills li, .lang span, .lang small, .card p, .contact-box p, .foot-links a';
+  const I18N_SEL = '.proj-group, .live, nav ul a, .tag, .lead, .btn, .num-big, .stat-label, .label, h2, h3, .about-text p, .side-title, .side-box p, .chip, .sublabel, .when, .item-body p, .where, .minor-title, .m-when, .m-what, .skills li, .lang span, .lang small, .card p, .contact-box p, .foot-links a';
   const norm = h => h.replace(/\s+/g, " ").trim();
   const i18nEls = [...document.querySelectorAll(I18N_SEL)].map(el => ({ el, de: el.innerHTML, key: norm(el.innerHTML) }));
   const langBtn = document.getElementById("langToggle");
