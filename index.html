@@ -189,6 +189,14 @@
   .skills li::before { content: ""; position: absolute; left: 0; top: 10px; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
   .skills small { display: block; color: var(--muted); font-size: 13px; }
 
+  .minor-title { font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin: 36px 0 12px; }
+  .minor { list-style: none; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); overflow: hidden; }
+  .minor li { display: grid; grid-template-columns: 150px 1fr auto; gap: 16px; padding: 14px 20px; align-items: baseline; }
+  .minor li + li { border-top: 1px solid var(--border); }
+  .m-when { color: var(--muted); font-size: 13px; font-weight: 500; }
+  .m-what { font-weight: 500; }
+  .m-where { color: var(--accent); font-size: 14px; text-align: right; }
+
   /* Projects */
   .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 18px; }
   .card {
@@ -237,6 +245,8 @@
     .stats { margin-top: 44px; gap: 10px; }
     .stat { padding: 16px; }
     .stat .num-big { font-size: 28px; }
+    .minor li { grid-template-columns: 1fr; gap: 2px; padding: 12px 16px; }
+    .m-where { text-align: left; }
     .hero { padding: 64px 0 70px; }
     .hero-grid { grid-template-columns: 1fr; gap: 32px; }
     .photo { width: 180px; height: 180px; order: -1; }
@@ -340,33 +350,16 @@
         <div class="where">Fraport AG · Frankfurt am Main</div>
         <p>Schwerpunkt Miles &amp; More. Mitarbeit an Marketing- und Optimierungsprojekten.</p>
       </div>
-      <div class="item">
-        <div class="when">08/2024 – heute</div>
-        <h3>Aushilfe in der Logistik</h3>
-        <div class="where">Reinfurt Holzernte und Logistik GmbH &amp; Co. KG · Marktheidenfeld</div>
-      </div>
-      <div class="item">
-        <div class="when">2020 – 2023</div>
-        <h3>Ferienaushilfe als Maschinenbediener</h3>
-        <div class="where">Procter &amp; Gamble · Marktheidenfeld</div>
-        <p>Tätigkeit in den Semesterferien.</p>
-      </div>
-      <div class="item">
-        <div class="when">02/2019 – 07/2019</div>
-        <h3>Praktikum im Einkauf</h3>
-        <div class="where">WAREMA Renkhoff SE · Marktheidenfeld</div>
-      </div>
-      <div class="item">
-        <div class="when">09/2018 – 12/2019</div>
-        <h3>Assistent des Ausbilders <span style="color:var(--muted);font-weight:500;font-size:15px">· Nebenjob</span></h3>
-        <div class="where">PRIMEROS Qualifikation GmbH · Karlstadt am Main</div>
-      </div>
-      <div class="item">
-        <div class="when">09/2018 – 01/2019</div>
-        <h3>Praktikum in der Verwaltung</h3>
-        <div class="where">Martinsbräu · Marktheidenfeld</div>
-      </div>
     </div>
+
+    <div class="minor-title">Weitere Erfahrung</div>
+    <ul class="minor">
+      <li><span class="m-when">08/2024 – heute</span><span class="m-what">Aushilfe in der Logistik</span><span class="m-where">Reinfurt Holzernte und Logistik</span></li>
+      <li><span class="m-when">2020 – 2023</span><span class="m-what">Ferienaushilfe als Maschinenbediener</span><span class="m-where">Procter &amp; Gamble</span></li>
+      <li><span class="m-when">02/2019 – 07/2019</span><span class="m-what">Praktikum im Einkauf</span><span class="m-where">WAREMA Renkhoff SE</span></li>
+      <li><span class="m-when">09/2018 – 12/2019</span><span class="m-what">Assistent des Ausbilders (Nebenjob)</span><span class="m-where">PRIMEROS Qualifikation</span></li>
+      <li><span class="m-when">09/2018 – 01/2019</span><span class="m-what">Praktikum in der Verwaltung</span><span class="m-where">Martinsbräu</span></li>
+    </ul>
 
     <div class="sublabel">Bildungsweg</div>
     <div class="timeline">
